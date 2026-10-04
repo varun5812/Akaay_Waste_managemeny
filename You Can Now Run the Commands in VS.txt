@@ -1,0 +1,45 @@
+==============================================================================
+CleanCity - Four-Terminal Architecture & Startup Commands
+==============================================================================
+
+Terminal 1: Citizen / User Backend API (Port 5056)
+------------------------------------------------------------------------------
+powershell
+cd "c:\Users\varun\Downloads\Waste_management_project_admin_redesign\Waste_management_project\backend"
+py -m uvicorn user_app:app --port 5056 --reload
+
+API Health: http://localhost:5056/api/health
+API Docs:   http://localhost:5056/docs
+
+
+Terminal 2: Citizen Resident Public Frontend (Port 3056)
+------------------------------------------------------------------------------
+powershell
+cd "c:\Users\varun\Downloads\Waste_management_project_admin_redesign\Waste_management_project\frontend"
+npm run dev
+
+Public Portal: http://localhost:3056
+
+
+Terminal 3: Municipal Admin Backend API (Port 5057)
+------------------------------------------------------------------------------
+powershell
+cd "c:\Users\varun\Downloads\Waste_management_project_admin_redesign\Waste_management_project\backend"
+py -m uvicorn admin_app:app --port 5057 --reload
+
+API Health: http://localhost:5057/api/health
+API Docs:   http://localhost:5057/docs
+
+
+Terminal 4: Municipal Admin Command Portal Frontend (Port 3057)
+------------------------------------------------------------------------------
+powershell
+cd "c:\Users\varun\Downloads\Waste_management_project_admin_redesign\Waste_management_project\admin_portal"
+npm run dev
+
+Admin Portal: http://localhost:3057
+Credentials:
+- Administrator ID: admin
+- Security Password: admin2026
+(Alternative: supervisor / wasteclean2026)
+==============================================================================
